@@ -36,6 +36,34 @@ The packaged v1.2.2 JAR contains **537 Create recipe JSON files**:
 
 The 85 non-mechanical-crafting recipes are retained from PRMA. The added ZeroContact integration accounts for **121** of the Mechanical Crafting recipes. Not every supported addon supplies recipes, and not every advanced gun modification can be represented as a simple fixed-output Create recipe.
 
+## Supported mods — recipe coverage
+
+**These are the mods that this release actually adds Create automation recipes for.** The numbers below were checked against the recipe files packaged in **v1.2.2** (not estimated from each mod's total item count). Each addon retains its own items: install that mod to craft its items.
+
+| Mod / content source | Create Mechanical Crafting recipes | Notes |
+| --- | ---: | --- |
+| **Timeless and Classics Zero (TaCZ)** | **165** | Core TaCZ items, guns and equipment |
+| **ZeroContact** | **124** | 121 gear-workbench recipes plus 3 earlier crafting conversions |
+| **GucciVuitton** | **48** | TaCZ addon recipes |
+| **LRADD** | **46** | TaCZ addon recipes |
+| **Guns and Targets** | **31** | Targets and related crafting |
+| **LRTactical** | **20** | Tactical items and equipment |
+| **Turret TaCZ** (`turrettacz`) | **8** | Turret-related recipes |
+| **Hardened Targets** | **5** | Target recipes |
+| **Apocalyptic Arsenal** | **4** | Related addon recipes |
+| **TaCZ Turrets** (`tacz_turrets`) | **1** | Turret recipe |
+| **Total added Mechanical Crafting recipes** | **452** | |
+
+In addition, the mod **retains all 85 original PRMA processing recipes** (45 Sequenced Assembly, 31 Cutting, 5 Mixing, 3 Crushing, and 1 Milling), bringing the total to **537 Create recipes**.
+
+**Create: Arms Race 1.2.0+** is a **required dependency and a source of the gun-crafting style/patterns**; its existing recipes are not counted as a separate addon group above. The TaCZ gun recipes in this mod use Arms Race layouts where applicable.
+
+### Other TaCZ addons reviewed but not converted
+
+**TaCZ Guns Lights Addon**, **TaCZ Tweaks**, **TaCZ Presence**, and **TaCZ Addon** have **no converted Create recipes in this release**. In particular, the two TaCZ Addon gun-upgrade operations that modify an existing weapon were left out because a fixed-output crafting recipe could lose the original gun's data. Their absence from the table does **not** mean the mods are incompatible with Minecraft or TaCZ.
+
+> **Dependency note:** Only the three mods in the Required section below are mandatory for the automation mod itself. For optional addons in this table, install the matching mod to use its corresponding recipes. Some combinations still need in-game verification.
+
 ## Requirements
 
 ### Required
@@ -50,7 +78,7 @@ The 85 non-mechanical-crafting recipes are retained from PRMA. The added ZeroCon
 
 ### Optional integrations
 
-**ZeroContact 1.1.6+** enables its additional gear recipes. Other recipes reference items from their respective TaCZ addons; those items and recipes are only usable when the matching addons are present. Install the addons you intend to automate.
+**ZeroContact** enables its 124 addon recipes; the other optional supported packs are listed in the **Supported mods — recipe coverage** table above. Their recipes reference items provided by those addons, so install whichever packs you want to automate. Check compatibility with Minecraft 1.20.1; do not treat the recipe table as a mandatory dependency list.
 
 > Minimum versions are based on the Forge dependency metadata included in v1.2.2. A higher version still needs to be compatible with Minecraft 1.20.1 and the rest of your modpack.
 
