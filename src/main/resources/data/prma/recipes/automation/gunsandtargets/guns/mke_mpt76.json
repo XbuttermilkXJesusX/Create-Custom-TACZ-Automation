@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "PAASPSSP",
+    "   A P A",
+    "   A    "
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:plates/aluminum"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "S": {
+      "tag": "forge:plates/steel"
+    }
+  },
+  "result": {
+    "item": "tacz:modern_kinetic_gun",
+    "nbt": "{GunId:\"gat:mke_mpt76\",GunFireMode:\"SEMI\",GunCurrentAmmoCount:20,HasBulletInBarrel:1b,Damage:0,ai_ammo:{}}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gunsandtargets"
+    }
+  ]
+}
