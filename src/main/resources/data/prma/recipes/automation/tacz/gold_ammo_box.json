@@ -1,0 +1,28 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    " AA ",
+    "AABA",
+    " A  ",
+    " A  "
+  ],
+  "key": {
+    "A": {
+      "tag": "minecraft:planks"
+    },
+    "B": {
+      "tag": "forge:ingots/gold"
+    }
+  },
+  "result": {
+    "item": "tacz:ammo_box",
+    "nbt": "{Level:1}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tacz"
+    }
+  ]
+}

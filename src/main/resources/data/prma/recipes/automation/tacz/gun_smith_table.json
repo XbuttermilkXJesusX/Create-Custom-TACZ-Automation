@@ -1,0 +1,31 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AB",
+    "CC",
+    "BB",
+    "C ",
+    "B "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_block"
+    },
+    "B": {
+      "tag": "forge:ingots/iron"
+    },
+    "C": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "tacz:gun_smith_table"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tacz"
+    }
+  ]
+}

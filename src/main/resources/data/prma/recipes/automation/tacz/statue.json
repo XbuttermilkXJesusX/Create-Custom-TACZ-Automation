@@ -1,0 +1,29 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "A  ",
+    "BBA",
+    " C "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:chiseled_quartz_block"
+    },
+    "B": {
+      "item": "minecraft:quartz_stairs"
+    },
+    "C": {
+      "item": "minecraft:quartz_slab"
+    }
+  },
+  "result": {
+    "item": "tacz:statue"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tacz"
+    }
+  ]
+}
