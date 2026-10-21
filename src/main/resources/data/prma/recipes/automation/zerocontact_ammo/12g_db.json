@@ -1,0 +1,23 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "prma:shotgun_shell_base"
+    },
+    {
+      "item": "prma:shotgun_shell"
+    }
+  ],
+  "results": [
+    {
+      "item": "zerocontact:12g_db",
+      "count": 1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "prma:small_brass_low_gunpowder_cartridge"
+    },
+    {
+      "item": "prma:9mm_head"
+    }
+  ],
+  "results": [
+    {
+      "item": "zerocontact:9x19luger_cci",
+      "count": 1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

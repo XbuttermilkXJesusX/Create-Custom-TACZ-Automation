@@ -1,0 +1,23 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "prma:long_iron_high_gunpowder_cartridge"
+    },
+    {
+      "item": "prma:long_iron_head"
+    }
+  ],
+  "results": [
+    {
+      "item": "zerocontact:50bmg_api_t",
+      "count": 1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

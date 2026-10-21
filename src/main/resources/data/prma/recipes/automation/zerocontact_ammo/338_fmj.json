@@ -1,0 +1,23 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "prma:long_brass_high_gunpowder_cartridge"
+    },
+    {
+      "item": "prma:338_head"
+    }
+  ],
+  "results": [
+    {
+      "item": "zerocontact:338_fmj",
+      "count": 1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

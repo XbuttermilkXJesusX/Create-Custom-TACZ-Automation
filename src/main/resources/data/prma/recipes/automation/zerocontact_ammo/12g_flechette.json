@@ -1,0 +1,23 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "prma:shotgun_shell_base"
+    },
+    {
+      "item": "prma:small_iron_head"
+    }
+  ],
+  "results": [
+    {
+      "item": "zerocontact:12g_flechette",
+      "count": 1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

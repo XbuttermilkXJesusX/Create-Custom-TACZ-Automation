@@ -1,0 +1,23 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "prma:medium_brass_medium_gunpowder_cartridge"
+    },
+    {
+      "item": "prma:small_iron_head"
+    }
+  ],
+  "results": [
+    {
+      "item": "zerocontact:556x45m855a1",
+      "count": 1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

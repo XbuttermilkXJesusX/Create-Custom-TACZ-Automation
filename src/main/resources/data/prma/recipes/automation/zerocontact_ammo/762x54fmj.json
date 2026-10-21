@@ -1,0 +1,23 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "prma:medium_iron_high_gunpowder_cartridge"
+    },
+    {
+      "item": "prma:762x54_head"
+    }
+  ],
+  "results": [
+    {
+      "item": "zerocontact:762x54fmj",
+      "count": 1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

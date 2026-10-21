@@ -8,3 +8,6 @@ out/
 *.class
 *.jar
 .DS_Store
+
+# Allow the compatibility class used by the no-compile overlay builder
+!compatibility/prebuilt/**/*.class

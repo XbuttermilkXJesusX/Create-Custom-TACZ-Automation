@@ -6,9 +6,24 @@ Create: Custom TACZ Automation expands **Create: Precise Manufacturing (PRMA)** 
 
 This project is a customized continuation of PRMA's **simplified automation** version. It retains the original PRMA content and adds recipes inspired by Create: Arms Race and other TaCZ-related addons.
 
-> **Current version: 1.2.2** · Minecraft **1.20.1** · **Minecraft Forge 47.x** · Works on **client and dedicated server**
+> **Current version: 1.3.1** · Minecraft **1.20.1** · **Minecraft Forge 47.x** · Works on **client and dedicated server**
 >
 > **Important:** The internal mod ID is still `prma` for compatibility. **This replaces the original PRMA mod; do not install both JARs.**
+
+
+## Version 1.3.1 — ZeroContact ammo production update
+
+All **55 ZeroContact ammunition variants** now use Create's **Deployer** for the final ammunition assembly instead of large, randomly arranged Mechanical Crafter layouts. Each starts from a PRMA casing or filled cartridge and consumes a caliber-/variant-specific bullet component or modifier. This makes the ZeroContact rounds part of PRMA's normal ammunition-material production chain.
+
+This update preserves the other **66 ZeroContact gear-workbench** automation recipes and the three earlier ZeroContact conversions. It leaves PRMA's 45 original Sequenced Assembly recipes, all items/code, and the integrated Extra Gauges patch unchanged. Read [the complete new ammunition recipe table](docs/ZeroContact-Ammo-Production-v1.3.1.md) and [CSV](docs/ZeroContact-Ammo-Production-v1.3.1.csv).
+
+**Not a replacement for PRMA Sequenced Assembly:** the final ZeroContact-ammo step is Create Deploying, not a new multistep recipe for each variant. This avoids recipe-selection conflicts between variants sharing the same underlying cartridge. ZeroContact's original bulk-workbench material costs were intentionally adapted for PRMA cartridge-and-Deployer production.
+
+## Version 1.3.0
+
+Version **1.3.0** is a release/version update of v1.2.3. **All 537 Create recipes, the original PRMA compiled functionality, and the integrated TaCZ `GunId` Factory Gauge patch are preserved.** It does not add new recipes or change crafting costs.
+
+**Source transparency:** The ZIP linked with this release contains editable recipe/asset sources and the readable Java source for the **Extra Gauges compatibility Mixin**. PRMA's original 64 compiled Java classes are *not* supplied as independent `.java` files in this archive. For a full editable Gradle project, run the upstream source preparation script and verify compilation yourself. The release JAR is reproducible through the overlay builder with a separately obtained PRMA 0.4.4 JAR.
 
 ## Features
 
@@ -17,16 +32,18 @@ This project is a customized continuation of PRMA's **simplified automation** ve
 - **Ammunition production:** Keep PRMA's original ammunition-processing recipes, including multi-step **Sequenced Assembly**.
 - **Create processing:** Includes PRMA's original cutting, mixing, crushing, and milling recipes, plus its items, assets, and processing functionality.
 - **Tactical equipment:** Adds mechanical crafting for targets, turrets, and equipment from supported addons.
-- **ZeroContact integration (v1.2.2):** Adds 121 mechanical crafting recipes for ammunition, armor, loadouts/backpacks, and electronic modules when ZeroContact is installed.
+- **ZeroContact integration:** Adds 55 Deployer ammunition recipes and 69 Mechanical Crafting recipes for armor, loadouts, equipment, and the earlier ZeroContact conversions when ZeroContact is installed.
 - **Factory-friendly recipes:** Designed for Create logistics, automation, and larger Mechanical Crafter setups.
+- **Built-in Extra Gauges × TaCZ support (v1.2.3):** Adds `GunId`-aware mechanical recipe selection when the original Create: Extra Gauges 2.0.7 is installed; the standalone compatibility addon is no longer required.
 
-### What's in v1.2.2?
+### What's in v1.3.1?
 
-The packaged v1.2.2 JAR contains **537 Create recipe JSON files**:
+The packaged v1.3.1 JAR contains **537 Create recipe JSON files**:
 
 | Recipe type | Count |
 | --- | ---: |
-| Mechanical Crafting | 452 |
+| Mechanical Crafting | 397 |
+| Deploying (ZeroContact ammunition) | 55 |
 | Sequenced Assembly | 45 |
 | Mechanical Cutting | 31 |
 | Mixing | 5 |
@@ -34,16 +51,16 @@ The packaged v1.2.2 JAR contains **537 Create recipe JSON files**:
 | Milling | 1 |
 | **Total** | **537** |
 
-The 85 non-mechanical-crafting recipes are retained from PRMA. The added ZeroContact integration accounts for **121** of the Mechanical Crafting recipes. Not every supported addon supplies recipes, and not every advanced gun modification can be represented as a simple fixed-output Create recipe.
+All 85 original PRMA recipes are retained unchanged. The added ZeroContact integration accounts for **66** of the Mechanical Crafting recipes and **55** Deploying recipes. Not every supported addon supplies recipes, and not every advanced gun modification can be represented as a simple fixed-output Create recipe.
 
 ## Supported mods — recipe coverage
 
-**These are the mods that this release actually adds Create automation recipes for.** The numbers below were checked against the recipe files packaged in **v1.2.2** (not estimated from each mod's total item count). Each addon retains its own items: install that mod to craft its items.
+**These are the mods that this release actually adds Create automation recipes for.** The numbers below were checked against the recipe files packaged in **v1.3.1** (not estimated from each mod's total item count). Each addon retains its own items: install that mod to craft its items.
 
-| Mod / content source | Create Mechanical Crafting recipes | Notes |
+| Mod / content source | New Create recipes | Notes |
 | --- | ---: | --- |
 | **Timeless and Classics Zero (TaCZ)** | **165** | Core TaCZ items, guns and equipment |
-| **ZeroContact** | **124** | 121 gear-workbench recipes plus 3 earlier crafting conversions |
+| **ZeroContact** | **69** Mechanical Crafting + **55** Deploying | 55 Deployer ammo recipes, 66 remaining gear-workbench recipes, and 3 earlier crafting conversions |
 | **GucciVuitton** | **48** | TaCZ addon recipes |
 | **LRADD** | **46** | TaCZ addon recipes |
 | **Guns and Targets** | **31** | Targets and related crafting |
@@ -52,9 +69,9 @@ The 85 non-mechanical-crafting recipes are retained from PRMA. The added ZeroCon
 | **Hardened Targets** | **5** | Target recipes |
 | **Apocalyptic Arsenal** | **4** | Related addon recipes |
 | **TaCZ Turrets** (`tacz_turrets`) | **1** | Turret recipe |
-| **Total added Mechanical Crafting recipes** | **452** | |
+| **Total new automation recipes** | **452** | 397 Mechanical Crafting + 55 Deploying |
 
-In addition, the mod **retains all 85 original PRMA processing recipes** (45 Sequenced Assembly, 31 Cutting, 5 Mixing, 3 Crushing, and 1 Milling), bringing the total to **537 Create recipes**.
+In addition to **397 Mechanical Crafting** and **55 ZeroContact Deploying** recipes, the mod retains all **85 original PRMA processing recipes** (45 Sequenced Assembly, 31 Cutting, 5 Mixing, 3 Crushing, and 1 Milling), bringing the total to **537 Create recipes**.
 
 **Create: Arms Race 1.2.0+** is a **required dependency and a source of the gun-crafting style/patterns**; its existing recipes are not counted as a separate addon group above. The TaCZ gun recipes in this mod use Arms Race layouts where applicable.
 
@@ -78,9 +95,11 @@ In addition, the mod **retains all 85 original PRMA processing recipes** (45 Seq
 
 ### Optional integrations
 
-**ZeroContact** enables its 124 addon recipes; the other optional supported packs are listed in the **Supported mods — recipe coverage** table above. Their recipes reference items provided by those addons, so install whichever packs you want to automate. Check compatibility with Minecraft 1.20.1; do not treat the recipe table as a mandatory dependency list.
+**Create: Extra Gauges 2.0.7** optionally enables the built-in TaCZ Factory Gauge compatibility patch. **Do not install the standalone Extra Gauges × TaCZ compatibility addon at the same time.**
 
-> Minimum versions are based on the Forge dependency metadata included in v1.2.2. A higher version still needs to be compatible with Minecraft 1.20.1 and the rest of your modpack.
+**ZeroContact** enables its 124 addon recipes (69 Mechanical Crafting, 55 Deploying); the other optional supported packs are listed in the **Supported mods — recipe coverage** table above. Their recipes reference items provided by those addons, so install whichever packs you want to automate. Check compatibility with Minecraft 1.20.1; do not treat the recipe table as a mandatory dependency list.
+
+> Minimum versions are based on the Forge dependency metadata included in v1.3.1. A higher version still needs to be compatible with Minecraft 1.20.1 and the rest of your modpack.
 
 ## Installation
 
@@ -88,8 +107,9 @@ In addition, the mod **retains all 85 original PRMA processing recipes** (45 Seq
 2. Download the latest **Create: Custom TACZ Automation** release JAR.
 3. Remove the original **PRMA / Create: Precise Manufacturing** JAR, if installed. Both mods use the same `prma` ID.
 4. Place this mod's JAR in the `mods` folder **on both the client and the server**.
-5. Add any optional TaCZ addons whose recipes you want to use.
-6. Start Minecraft and the server, then look up recipes in your recipe viewer or test them in a Mechanical Crafter.
+5. For NBT-aware Factory Gauge recipe selection, install the **unmodified Create: Extra Gauges 2.0.7 JAR** and remove any standalone Extra Gauges × TaCZ compatibility addon.
+6. Add any optional TaCZ addons whose recipes you want to use.
+7. Start Minecraft and the server, then look up recipes in your recipe viewer or test them in a Mechanical Crafter.
 
 **Updating:** Replace the previous Custom TACZ Automation JAR; do not leave multiple versions installed. Back up your world before updating a large modpack.
 
@@ -99,13 +119,14 @@ Build a Create processing line, supply the listed ingredients, and route its out
 
 - **Mechanical Crafters** for guns, attachments, and equipment (some patterns are larger than 3×3).
 - **Sequenced Assembly** for PRMA's multi-stage ammunition manufacturing.
+- **Deployers** for the 55 ZeroContact ammunition finishing recipes (PRMA-prepared cartridges plus a variant-specific component).
 - **Mixers, Mechanical Saws, Crushing Wheels, and Millstones** for PRMA materials and intermediate processing.
 
-Some TaCZ weapons share the same underlying Minecraft item ID and are distinguished by NBT (`GunId`). If you use Factory Gauges or stock-request automation, ensure your version of those systems correctly distinguishes TaCZ gun variants. Create recipe validation alone cannot guarantee compatibility with every inventory or gauge addon.
+TaCZ gun variants share the item `tacz:modern_kinetic_gun`. With **original Extra Gauges 2.0.7**, the included optional client-side compatibility Mixin makes Factory Gauge mechanical recipe selection distinguish `GunId` values. This is the proven standalone v1.0.3 compatibility code merged into the automation JAR, without altering the Extra Gauges JAR. In-game testing of the merged packaging is still pending; Stock Link internals are not modified.
 
 ## Building from source
 
-This repository's downloadable **source overlay** contains the editable recipes, textures, models, language files, Forge metadata, and setup scripts for v1.2.2. **It is not a standalone Java source project by itself.** The Java implementation originally comes from [Create: Precise Manufacturing](https://github.com/CTRL-Neo-Studios/PreciseManufacturing) (PRMA), by Type-32 / CTRL-Neo-Studios.
+This repository's downloadable **source overlay** contains the editable recipes, textures, models, language files, Forge metadata, and setup scripts for v1.3.1. **It is not a standalone Java source project by itself.** The Java implementation originally comes from [Create: Precise Manufacturing](https://github.com/CTRL-Neo-Studios/PreciseManufacturing) (PRMA), by Type-32 / CTRL-Neo-Studios.
 
 There are two build workflows. Choose the one that fits your goal.
 
@@ -113,7 +134,7 @@ There are two build workflows. Choose the one that fits your goal.
 
 **Prerequisites:** Java **17 JDK**, Python **3.9+**, Git, and internet access to download Gradle dependencies.
 
-1. Download/extract the v1.2.2 GitHub source overlay ZIP.
+1. Download/extract the v1.3.1 GitHub source overlay ZIP.
 2. Open a terminal in that extracted folder.
 3. Run:
 
@@ -143,7 +164,7 @@ There are two build workflows. Choose the one that fits your goal.
 
 6. If successful, the resulting JAR will be in `build/libs/`.
 
-> **Build status:** This is the source-development route, but **a clean Gradle compilation of v1.2.2 has not been verified**. The available PRMA source branch may differ from the exact PRMA 0.4.4 binary used for the released mod, and Create/TaCZ development dependencies may require adjustment. Do not assume that a newly compiled JAR is identical to the distributed release until it has been tested.
+> **Build status:** This is the source-development route, but **a clean Gradle compilation of v1.3.1 has not been verified**. The available PRMA source branch may differ from the exact PRMA 0.4.4 binary used for the released mod, and Create/TaCZ development dependencies may require adjustment. Do not assume that a newly compiled JAR is identical to the distributed release until it has been tested.
 
 ### Option B — Repackage recipes with the existing PRMA JAR (no Java compilation)
 
@@ -157,13 +178,13 @@ From the extracted source overlay folder, run:
 python scripts/build_overlay.py --upstream "path/to/prma-1.20.1-0.4.4-cr6.0-SIMPLE-beta-all.jar"
 ```
 
-The script combines the original PRMA compiled classes with this repository's resources and writes:
+The script combines the original PRMA compiled classes with this repository's resources and the prebuilt Extra Gauges compatibility Mixin. The matching editable Java source is included in `compatibility/src/main/java/`. It writes:
 
 ```text
-build/libs/Create-Custom-TACZ-Automation-1.2.2.jar
+build/libs/Create-Custom-TACZ-Automation-1.3.1.jar
 ```
 
-**This is a binary/resource overlay, not a Java compilation.** It does not let you change PRMA's Java behavior. You must supply the upstream JAR yourself; do not commit someone else's binary to this repository without checking permission.
+**This is a binary/resource overlay, not a Java compilation.** It does not let you change PRMA's Java behavior. To change the compatibility Mixin itself, edit its Java source and compile with the full Minecraft/Forge/Create toolchain, then replace its prebuilt class. You must supply the upstream JAR yourself; do not commit someone else's binary to this repository without checking permission.
 
 ### Editing or adding recipes
 
@@ -198,10 +219,10 @@ This checksum check **will report differences after intentional edits**. It is n
 - `src/main/resources/` — editable data and asset overlay.
 - `tools/prepare_github.py` — prepares a Gradle project using upstream PRMA source.
 - `scripts/build_overlay.py` — packages the resource overlay with a local PRMA JAR.
-- `docs/` — ZeroContact v1.2.2 recipe guide and CSV catalog.
+- `docs/` — current ZeroContact ammunition recipe guide and CSV; also includes the historical v1.2.2 catalog.
 - `manifest.sha256.json` — reference hashes for the unmodified source overlay.
 
-**v1.2.2:** Adds 121 ZeroContact equipment recipes on top of the previous TaCZ/Arms Race-style automation and PRMA processing. See the ZeroContact recipe catalog in `docs/` for patterns, ingredients, and item IDs.
+**v1.3.0:** Version update with the same recipes and integrated compatibility patch as v1.2.3; no crafting balance changes. **v1.2.3:** Integrates the working Extra Gauges × TaCZ compatibility Mixin directly into the automation mod. **v1.2.2:** Adds 121 ZeroContact equipment recipes on top of the previous TaCZ/Arms Race-style automation and PRMA processing. See the ZeroContact recipe catalog in `docs/` for patterns, ingredients, and item IDs.
 
 ## Known limitations
 
@@ -217,3 +238,10 @@ This checksum check **will report differences after intentional edits**. It is n
 PRMA also attributes some bullet/cartridge textures to **Timeless and Classics Zero**, with **CC BY-NC-SA 4.0** licensing. **Those assets may have different redistribution requirements from the code.** Check the original notices and rights for any third-party content before distributing a public source repository or release JAR.
 
 This is a community customization and is **not an official TaCZ or Create release**.
+
+
+### Embedded Extra Gauges compatibility (introduced in v1.2.3)
+
+Version 1.3.1 continues to include the same GunId-aware Factory Gauge Mixin as the standalone compatibility addon v1.0.3. It is **not** a modified Extra Gauges JAR. Install original `extra_gauges-2.0.7.jar` to use its features, and **remove the separate `create-extra-gauges-tacz-compat-*.jar`** to avoid loading the Mixin twice. The internal mod ID remains `prma`; no second mod ID is registered by the embedded patch. The patch is client-side and has no direct effect on dedicated servers.
+
+The ZIP contains `compatibility/src/main/java` (readable source) and `compatibility/prebuilt` (the bytecode used for a deterministic no-compile overlay build). The Gradle workflow has not yet been tested with this additional Mixin.
