@@ -1,83 +1,191 @@
-# Create: Custom TACZ Automation — v1.2.2 source overlay
+# Create: Custom TACZ Automation
 
-**Minecraft 1.20.1 • Forge 47.x • Create 6.0.8+ • TaCZ 1.1.8-hotfix2+ • Create: Arms Race 1.2.0+**
+**Bring your TaCZ workshop into a Create-powered factory.**
 
-This archive contains **all editable resource files extracted from the user's exact
-v1.2.2 mod JAR** (Create processing and mechanical crafting JSON, models, textures,
-translations, mixin configuration, and Forge metadata). It is intended to be
-applied **on top of the original PRMA Java source repository**, which is MIT-licensed.
+Create: Custom TACZ Automation expands **Create: Precise Manufacturing (PRMA)** with automated crafting recipes for weapons, attachments, ammunition, tactical equipment, and more. Instead of producing everything by hand, you can build production lines using Create's Mechanical Crafters and PRMA's processing machines.
 
-## Important: this ZIP is a source **overlay**, not a complete standalone Java project
+This project is a customized continuation of PRMA's **simplified automation** version. It retains the original PRMA content and adds recipes inspired by Create: Arms Race and other TaCZ-related addons.
 
-The finished v1.2.2 mod was produced by adding and changing resources inside a
-**compiled PRMA JAR**. A compiled JAR contains `.class` bytecode rather than the
-original editable Java files. To avoid presenting decompiled or invented Java as
-the original source, this archive supplies your **exact resource files** and
-an automated method of combining them with PRMA's **public original Java source**.
+> **Current version: 1.2.2** · Minecraft **1.20.1** · **Minecraft Forge 47.x** · Works on **client and dedicated server**
+>
+> **Important:** The internal mod ID is still `prma` for compatibility. **This replaces the original PRMA mod; do not install both JARs.**
 
-Original upstream project:
-https://github.com/CTRL-Neo-Studios/PreciseManufacturing
+## Features
 
-Recommended branch: `1.20.1-simple-create0.6`.
+- **Industrial gun production:** Create Mechanical Crafting recipes for TaCZ weapons, using Arms Race patterns where applicable and plate-and-mechanism style recipes for other supported guns.
+- **Attachments and accessories:** Automate compatible sights, grips, magazines, and other gun accessories.
+- **Ammunition production:** Keep PRMA's original ammunition-processing recipes, including multi-step **Sequenced Assembly**.
+- **Create processing:** Includes PRMA's original cutting, mixing, crushing, and milling recipes, plus its items, assets, and processing functionality.
+- **Tactical equipment:** Adds mechanical crafting for targets, turrets, and equipment from supported addons.
+- **ZeroContact integration (v1.2.2):** Adds 121 mechanical crafting recipes for ammunition, armor, loadouts/backpacks, and electronic modules when ZeroContact is installed.
+- **Factory-friendly recipes:** Designed for Create logistics, automation, and larger Mechanical Crafter setups.
 
-## Create the GitHub repository (Windows / macOS / Linux)
+### What's in v1.2.2?
 
-1. Install Git, Python 3, and Java **17**.
-2. Extract this archive somewhere convenient.
-3. In a terminal opened inside the extracted folder, run:
+The packaged v1.2.2 JAR contains **537 Create recipe JSON files**:
 
-   ```shell
+| Recipe type | Count |
+| --- | ---: |
+| Mechanical Crafting | 452 |
+| Sequenced Assembly | 45 |
+| Mechanical Cutting | 31 |
+| Mixing | 5 |
+| Crushing | 3 |
+| Milling | 1 |
+| **Total** | **537** |
+
+The 85 non-mechanical-crafting recipes are retained from PRMA. The added ZeroContact integration accounts for **121** of the Mechanical Crafting recipes. Not every supported addon supplies recipes, and not every advanced gun modification can be represented as a simple fixed-output Create recipe.
+
+## Requirements
+
+### Required
+
+| Dependency | Minimum version |
+| --- | --- |
+| Minecraft | 1.20.1 |
+| Forge | 47.x |
+| [Create](https://modrinth.com/mod/create) | **6.0.8+**, compatible with Minecraft 1.20.1 |
+| Create: Arms Race | **1.2.0+** |
+| [Timeless and Classics Zero (TaCZ)](https://modrinth.com/mod/timeless-and-classics-zero) | **1.1.8-hotfix2+** |
+
+### Optional integrations
+
+**ZeroContact 1.1.6+** enables its additional gear recipes. Other recipes reference items from their respective TaCZ addons; those items and recipes are only usable when the matching addons are present. Install the addons you intend to automate.
+
+> Minimum versions are based on the Forge dependency metadata included in v1.2.2. A higher version still needs to be compatible with Minecraft 1.20.1 and the rest of your modpack.
+
+## Installation
+
+1. Install Minecraft **1.20.1 Forge** and the three required mods above.
+2. Download the latest **Create: Custom TACZ Automation** release JAR.
+3. Remove the original **PRMA / Create: Precise Manufacturing** JAR, if installed. Both mods use the same `prma` ID.
+4. Place this mod's JAR in the `mods` folder **on both the client and the server**.
+5. Add any optional TaCZ addons whose recipes you want to use.
+6. Start Minecraft and the server, then look up recipes in your recipe viewer or test them in a Mechanical Crafter.
+
+**Updating:** Replace the previous Custom TACZ Automation JAR; do not leave multiple versions installed. Back up your world before updating a large modpack.
+
+## How to use it
+
+Build a Create processing line, supply the listed ingredients, and route its output into your factory's storage. Different products use different Create machines:
+
+- **Mechanical Crafters** for guns, attachments, and equipment (some patterns are larger than 3×3).
+- **Sequenced Assembly** for PRMA's multi-stage ammunition manufacturing.
+- **Mixers, Mechanical Saws, Crushing Wheels, and Millstones** for PRMA materials and intermediate processing.
+
+Some TaCZ weapons share the same underlying Minecraft item ID and are distinguished by NBT (`GunId`). If you use Factory Gauges or stock-request automation, ensure your version of those systems correctly distinguishes TaCZ gun variants. Create recipe validation alone cannot guarantee compatibility with every inventory or gauge addon.
+
+## Building from source
+
+This repository's downloadable **source overlay** contains the editable recipes, textures, models, language files, Forge metadata, and setup scripts for v1.2.2. **It is not a standalone Java source project by itself.** The Java implementation originally comes from [Create: Precise Manufacturing](https://github.com/CTRL-Neo-Studios/PreciseManufacturing) (PRMA), by Type-32 / CTRL-Neo-Studios.
+
+There are two build workflows. Choose the one that fits your goal.
+
+### Option A — Build the complete project with Gradle (development)
+
+**Prerequisites:** Java **17 JDK**, Python **3.9+**, Git, and internet access to download Gradle dependencies.
+
+1. Download/extract the v1.2.2 GitHub source overlay ZIP.
+2. Open a terminal in that extracted folder.
+3. Run:
+
+   ```bash
    python tools/prepare_github.py
    ```
 
-   This clones the public PRMA source under `Create-Custom-TACZ-Automation-Source/`
-   and overlays all v1.2.2 resources. The script updates `gradle.properties` with
-   the new display name/version and Create dependency (the documented
-   Create 6.0.8-289 development artifact).
-4. Open `Create-Custom-TACZ-Automation-Source/` and review the changes.
-5. You can now create a **new GitHub repository**, upload the contents of that
-   source directory, or push it via Git (see `GITHUB_STEPS.md`).
-6. To try building it, from inside the source directory run:
-   - Windows: `gradlew.bat build`
-   - macOS/Linux: `./gradlew build`
+   The script clones the original PRMA Java source (branch `1.20.1-simple-create0.6`), applies this mod's resources and `mods.toml`, and creates `Create-Custom-TACZ-Automation-Source/`.
 
-> **Build warning:** Gradle compilation was **not verified** here. The original
-> upstream source branch may not exactly correspond to the compiled PRMA 0.4.4
-> release used to make the working v1.2.2 JAR. If Gradle reports API version,
-> mapping, or library problems, resolve those in the upstream `build.gradle`
-> before treating its output as equivalent to v1.2.2. The included JSON/resources
-> were verified against the working JAR, not tested in a new compiled build.
+4. Enter the generated source folder:
 
-## Original code and licensing
+   ```bash
+   cd Create-Custom-TACZ-Automation-Source
+   ```
 
-PRMA Java classes, Forge project scripts, and build wrapper are published in the
-upstream project by Type-32 / CTRL-Neo-Studios. Keep the upstream MIT license,
-author credit, and license notices. PRMA's README says some ammo/cartridge
-textures are derived from TaCZ with **CC BY-NC-SA 4.0** attribution, which is
-separate from the MIT license on the code; review those terms before public
-redistribution.
+5. Build with the included Gradle wrapper:
 
-The internal mod ID remains `prma` to preserve existing saves and PRMA items.
-Do **not** install the original PRMA JAR alongside this modified version.
+   **Windows (PowerShell / Command Prompt)**
+   ```bat
+   gradlew.bat build
+   ```
 
-## Resource layout
+   **Linux / macOS**
+   ```bash
+   ./gradlew build
+   ```
 
-- `src/main/resources/data/prma/recipes/` — actual Create recipes
-- `src/main/resources/assets/prma/` — images, models, translations, sounds
-- `src/main/resources/META-INF/mods.toml` — v1.2.2 dependency requirements
-- `src/main/resources/prma.mixins.json` — PRMA mixin registration
-- `tools/prepare_github.py` — download Java source / apply overlay
-- `tools/verify_resources.py` — verify overlay checksums
-- `manifest.sha256.json` — list of all extracted resource files
+6. If successful, the resulting JAR will be in `build/libs/`.
 
-**Not included:** compiled Java bytecode, bundled third-party JARs, Gradle caches,
-or source files fetched from GitHub. These belong in their respective original
-projects or are downloaded by the setup script.
+> **Build status:** This is the source-development route, but **a clean Gradle compilation of v1.2.2 has not been verified**. The available PRMA source branch may differ from the exact PRMA 0.4.4 binary used for the released mod, and Create/TaCZ development dependencies may require adjustment. Do not assume that a newly compiled JAR is identical to the distributed release until it has been tested.
 
-## ZeroContact recipes added in v1.2.2
+### Option B — Repackage recipes with the existing PRMA JAR (no Java compilation)
 
-Added 121 Create Mechanical Crafting recipes based on the original ZeroContact gear-workbench data. These are under `src/main/resources/data/prma/recipes/automation/zerocontact_gear/`. The mod contains conditional `forge:mod_loaded` checks and an optional ZeroContact dependency.
+This is useful if you only want to edit recipes, assets, or Forge metadata while keeping PRMA's compiled Java code unchanged.
 
-ZeroContact 1.1.6 or later must be installed to craft these items. All previous v1.2.1 recipes and original PRMA code are preserved.
+**Prerequisites:** Python **3.9+** and a local copy of the original `prma-1.20.1-0.4.4-cr6.0-SIMPLE-beta-all.jar`.
 
-The matching recipe list and notes are in `docs/`. Rebuilding the Java code still requires PRMA's original upstream sources as explained above.
+From the extracted source overlay folder, run:
+
+```bash
+python scripts/build_overlay.py --upstream "path/to/prma-1.20.1-0.4.4-cr6.0-SIMPLE-beta-all.jar"
+```
+
+The script combines the original PRMA compiled classes with this repository's resources and writes:
+
+```text
+build/libs/Create-Custom-TACZ-Automation-1.2.2.jar
+```
+
+**This is a binary/resource overlay, not a Java compilation.** It does not let you change PRMA's Java behavior. You must supply the upstream JAR yourself; do not commit someone else's binary to this repository without checking permission.
+
+### Editing or adding recipes
+
+The main recipe folder is:
+
+```text
+src/main/resources/data/prma/recipes/
+```
+
+Useful locations include:
+
+```text
+src/main/resources/
+├── META-INF/mods.toml             # Mod name, version, dependency ranges
+├── assets/prma/                   # Textures, models, translations
+├── data/prma/recipes/             # Create processing and crafting recipes
+├── data/prma/recipes/automation/  # Addon automation recipes
+└── prma.png                       # Mod icon
+```
+
+After changing recipe JSON, use either build workflow above. For an unchanged overlay, you can check the packaged resources against its manifest with:
+
+```bash
+python tools/verify_resources.py
+```
+
+This checksum check **will report differences after intentional edits**. It is not a JSON validity checker or a Minecraft gameplay test.
+
+## Repository and release notes
+
+- `README.md` — project overview, installation, build instructions.
+- `src/main/resources/` — editable data and asset overlay.
+- `tools/prepare_github.py` — prepares a Gradle project using upstream PRMA source.
+- `scripts/build_overlay.py` — packages the resource overlay with a local PRMA JAR.
+- `docs/` — ZeroContact v1.2.2 recipe guide and CSV catalog.
+- `manifest.sha256.json` — reference hashes for the unmodified source overlay.
+
+**v1.2.2:** Adds 121 ZeroContact equipment recipes on top of the previous TaCZ/Arms Race-style automation and PRMA processing. See the ZeroContact recipe catalog in `docs/` for patterns, ingredients, and item IDs.
+
+## Known limitations
+
+- Large Mechanical Crafting layouts are limited by Create's recipe dimensions (maximum 9×9 for the included recipes).
+- Some original high-cost recipes were adapted to fit Create's grid; consult the corresponding recipe documentation rather than assuming all ingredient totals match their source crafting station.
+- Fixed-output Create recipes cannot faithfully reproduce every gun-upgrade operation that modifies an existing weapon's NBT.
+- Runtime gameplay and all client/server combinations have **not been exhaustively tested**. Report the recipe ID, mod versions, logs, and screenshots when something fails.
+
+## Credits and licensing
+
+**Based on [Create: Precise Manufacturing](https://github.com/CTRL-Neo-Studios/PreciseManufacturing)** by **Type-32 / CTRL-Neo-Studios**. This project retains PRMA code, assets, and the internal `prma` mod ID. The upstream project publishes an **MIT** license for its software; preserve its original credits and license notices.
+
+PRMA also attributes some bullet/cartridge textures to **Timeless and Classics Zero**, with **CC BY-NC-SA 4.0** licensing. **Those assets may have different redistribution requirements from the code.** Check the original notices and rights for any third-party content before distributing a public source repository or release JAR.
+
+This is a community customization and is **not an official TaCZ or Create release**.
