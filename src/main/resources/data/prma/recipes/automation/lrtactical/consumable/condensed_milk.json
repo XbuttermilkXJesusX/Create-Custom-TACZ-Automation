@@ -1,0 +1,25 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "ABB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:milk_bucket"
+    },
+    "B": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "lrtactical:consumable",
+    "nbt": "{ConsumableId:\"lrtactical:condensed_milk\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "lrtactical"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    " A B",
+    " BAA",
+    "AAC "
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/iron"
+    },
+    "B": {
+      "tag": "forge:leather"
+    },
+    "C": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "lrtactical:melee",
+    "nbt": "{MeleeWeaponId:\"lrtactical:dagger\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "lrtactical"
+    }
+  ]
+}

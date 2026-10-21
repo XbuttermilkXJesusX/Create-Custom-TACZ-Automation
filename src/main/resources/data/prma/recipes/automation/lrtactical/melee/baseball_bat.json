@@ -1,0 +1,34 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "  A ",
+    "  A ",
+    "ABAC",
+    "ADBA"
+  ],
+  "key": {
+    "A": {
+      "tag": "minecraft:planks"
+    },
+    "B": {
+      "tag": "forge:ingots/iron"
+    },
+    "C": {
+      "tag": "forge:leather"
+    },
+    "D": {
+      "tag": "forge:gems/quartz"
+    }
+  },
+  "result": {
+    "item": "lrtactical:melee",
+    "nbt": "{MeleeWeaponId:\"lrtactical:baseball_bat\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "lrtactical"
+    }
+  ]
+}

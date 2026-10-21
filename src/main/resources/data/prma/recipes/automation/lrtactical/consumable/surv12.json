@@ -1,0 +1,34 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "  AA",
+    " BCC",
+    "ADB ",
+    "  B "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:paper"
+    },
+    "B": {
+      "item": "minecraft:gold_nugget"
+    },
+    "C": {
+      "tag": "forge:leather"
+    },
+    "D": {
+      "item": "minecraft:magma_cream"
+    }
+  },
+  "result": {
+    "item": "lrtactical:consumable",
+    "nbt": "{ConsumableId:\"lrtactical:surv12\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "lrtactical"
+    }
+  ]
+}
