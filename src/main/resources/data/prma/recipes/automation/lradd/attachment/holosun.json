@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "SSSSSS",
+    "  S   "
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:plates/steel"
+    }
+  },
+  "result": {
+    "item": "tacz:attachment",
+    "count": 1,
+    "nbt": "{AttachmentId:\"lradd:scope_holosun\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "lradd"
+    }
+  ]
+}

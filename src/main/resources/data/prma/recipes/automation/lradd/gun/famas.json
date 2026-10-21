@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "   PA  ",
+    "AAASPPP",
+    "   A SA"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:plates/aluminum"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "S": {
+      "tag": "forge:plates/steel"
+    }
+  },
+  "result": {
+    "item": "tacz:modern_kinetic_gun",
+    "nbt": "{GunId:\"lradd:famas\",GunFireMode:\"AUTO\",GunCurrentAmmoCount:25,HasBulletInBarrel:1b,Damage:0,ai_ammo:{}}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "lradd"
+    }
+  ]
+}

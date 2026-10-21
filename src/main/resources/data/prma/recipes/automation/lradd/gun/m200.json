@@ -1,0 +1,26 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "SPPPPPSPS",
+    "      SPS"
+  ],
+  "key": {
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "S": {
+      "tag": "forge:plates/steel"
+    }
+  },
+  "result": {
+    "item": "tacz:modern_kinetic_gun",
+    "nbt": "{GunId:\"lradd:m200\",GunFireMode:\"SEMI\",GunCurrentAmmoCount:10,HasBulletInBarrel:1b,Damage:0,ai_ammo:{}}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "lradd"
+    }
+  ]
+}

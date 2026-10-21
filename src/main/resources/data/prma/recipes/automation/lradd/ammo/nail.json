@@ -1,0 +1,27 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "A  ",
+    "AAA",
+    "AAA",
+    " AA",
+    "  A"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:raw_materials/iron"
+    }
+  },
+  "result": {
+    "item": "tacz:ammo",
+    "count": 40,
+    "nbt": "{AmmoId:\"lradd:nail\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "lradd"
+    }
+  ]
+}
