@@ -1,40 +1,83 @@
-# Create: Custom TACZ Automation — v1.2.1
+# Create: Custom TACZ Automation — v1.2.2 source overlay
 
-Minecraft **1.20.1** · Forge · internal mod ID `prma`
+**Minecraft 1.20.1 • Forge 47.x • Create 6.0.8+ • TaCZ 1.1.8-hotfix2+ • Create: Arms Race 1.2.0+**
 
-## What this repository contains
+This archive contains **all editable resource files extracted from the user's exact
+v1.2.2 mod JAR** (Create processing and mechanical crafting JSON, models, textures,
+translations, mixin configuration, and Forge metadata). It is intended to be
+applied **on top of the original PRMA Java source repository**, which is MIT-licensed.
 
-This is the **editable recipe, asset and metadata source** extracted from the v1.2.1 mod JAR, plus a script that can repackage the mod using the compiled classes from the original PRMA 0.4.4 JAR.
+## Important: this ZIP is a source **overlay**, not a complete standalone Java project
 
-- `src/main/resources/data/` — Create recipes, tags and other datapack resources.
-- `src/main/resources/assets/` — textures, models, language files and other assets.
-- `src/main/resources/META-INF/mods.toml` — editable Forge metadata including mod name and dependency requirements.
-- `scripts/build_overlay.py` — builds a working replacement JAR using existing original PRMA compiled classes and all resources from this repository.
+The finished v1.2.2 mod was produced by adding and changing resources inside a
+**compiled PRMA JAR**. A compiled JAR contains `.class` bytecode rather than the
+original editable Java files. To avoid presenting decompiled or invented Java as
+the original source, this archive supplies your **exact resource files** and
+an automated method of combining them with PRMA's **public original Java source**.
 
-**Important:** This is **not the original Java source code**. The published mod JAR contains 64 compiled `.class` entries, not `.java` source. These 64 classes are unchanged from the original PRMA JAR. Building directly from Java source requires the upstream PRMA source repository or a separate decompilation/reimplementation effort. Don't label this GitHub project as a full source-code port.
+Original upstream project:
+https://github.com/CTRL-Neo-Studios/PreciseManufacturing
 
-## Build a mod JAR
+Recommended branch: `1.20.1-simple-create0.6`.
 
-Install Python 3 and supply the original PRMA JAR locally (it is deliberately not embedded in this repository):
+## Create the GitHub repository (Windows / macOS / Linux)
 
-```bash
-python scripts/build_overlay.py --upstream "path/to/prma-1.20.1-0.4.4-cr6.0-SIMPLE-beta-all.jar"
-```
+1. Install Git, Python 3, and Java **17**.
+2. Extract this archive somewhere convenient.
+3. In a terminal opened inside the extracted folder, run:
 
-The output is `build/libs/Create-Custom-TACZ-Automation-1.2.1.jar`. This is an **overlay/repackaging** build, not a Gradle Java compile. Add the result to client and dedicated server; remove the original PRMA JAR, because both use the `prma` mod ID.
+   ```shell
+   python tools/prepare_github.py
+   ```
 
-## Edit recipes
+   This clones the public PRMA source under `Create-Custom-TACZ-Automation-Source/`
+   and overlays all v1.2.2 resources. The script updates `gradle.properties` with
+   the new display name/version and Create dependency (the documented
+   Create 6.0.8-289 development artifact).
+4. Open `Create-Custom-TACZ-Automation-Source/` and review the changes.
+5. You can now create a **new GitHub repository**, upload the contents of that
+   source directory, or push it via Git (see `GITHUB_STEPS.md`).
+6. To try building it, from inside the source directory run:
+   - Windows: `gradlew.bat build`
+   - macOS/Linux: `./gradlew build`
 
-Modify JSON files under `src/main/resources/data/`, then rerun the command above. Forge metadata lives at `src/main/resources/META-INF/mods.toml`.
+> **Build warning:** Gradle compilation was **not verified** here. The original
+> upstream source branch may not exactly correspond to the compiled PRMA 0.4.4
+> release used to make the working v1.2.2 JAR. If Gradle reports API version,
+> mapping, or library problems, resolve those in the upstream `build.gradle`
+> before treating its output as equivalent to v1.2.2. The included JSON/resources
+> were verified against the working JAR, not tested in a new compiled build.
 
-## Dependencies
+## Original code and licensing
 
-The JAR declares required versions for Create, Create: Arms Race, and TaCZ. Consult `mods.toml` for exact version ranges. Existing PRMA Java behavior remains unchanged.
+PRMA Java classes, Forge project scripts, and build wrapper are published in the
+upstream project by Type-32 / CTRL-Neo-Studios. Keep the upstream MIT license,
+author credit, and license notices. PRMA's README says some ammo/cartridge
+textures are derived from TaCZ with **CC BY-NC-SA 4.0** attribution, which is
+separate from the MIT license on the code; review those terms before public
+redistribution.
 
-## Licensing and credits
+The internal mod ID remains `prma` to preserve existing saves and PRMA items.
+Do **not** install the original PRMA JAR alongside this modified version.
 
-The JAR's Forge metadata states `MIT` and credits **Type-32** as an author. This repository was reconstructed from compiled artifacts. Confirm the original project's license and any separately licensed third-party textures/assets before publicly redistributing them, and preserve upstream notices and attribution. No claim is made that the upstream Java classes were independently authored here.
+## Resource layout
 
-## Verification
+- `src/main/resources/data/prma/recipes/` — actual Create recipes
+- `src/main/resources/assets/prma/` — images, models, translations, sounds
+- `src/main/resources/META-INF/mods.toml` — v1.2.2 dependency requirements
+- `src/main/resources/prma.mixins.json` — PRMA mixin registration
+- `tools/prepare_github.py` — download Java source / apply overlay
+- `tools/verify_resources.py` — verify overlay checksums
+- `manifest.sha256.json` — list of all extracted resource files
 
-The included resources were extracted from the current v1.2.1 JAR, while its 64 class files match the original PRMA JAR byte-for-byte. The overlay can be structurally verified, but this does not replace Minecraft client/server gameplay tests.
+**Not included:** compiled Java bytecode, bundled third-party JARs, Gradle caches,
+or source files fetched from GitHub. These belong in their respective original
+projects or are downloaded by the setup script.
+
+## ZeroContact recipes added in v1.2.2
+
+Added 121 Create Mechanical Crafting recipes based on the original ZeroContact gear-workbench data. These are under `src/main/resources/data/prma/recipes/automation/zerocontact_gear/`. The mod contains conditional `forge:mod_loaded` checks and an optional ZeroContact dependency.
+
+ZeroContact 1.1.6 or later must be installed to craft these items. All previous v1.2.1 recipes and original PRMA code are preserved.
+
+The matching recipe list and notes are in `docs/`. Rebuilding the Java code still requires PRMA's original upstream sources as explained above.
