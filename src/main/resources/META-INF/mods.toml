@@ -17,7 +17,7 @@ license="MIT"
 # The modid of the mod
 modId="prma" #mandatory
 # The version number of the mod
-version="1.2.1" #mandatory
+version="1.2.2" #mandatory
 # A display name for the mod
 displayName="Create: Custom TACZ Automation" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
@@ -79,3 +79,11 @@ description='''Create: Custom TACZ Automation, derived from Precise Manufacturin
    versionRange="[1.2.0,)"
    ordering="NONE"
    side="BOTH"
+
+# ZeroContact integration is optional. Recipes are conditional on the mod being present.
+[[dependencies."prma"]]
+modId="zerocontact"
+mandatory=false
+versionRange="[1.1.6,)"
+ordering="AFTER"
+side="BOTH"
