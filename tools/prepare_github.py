@@ -32,6 +32,13 @@ def main():
     resources=TARGET/'src/main/resources'
     if resources.exists(): shutil.rmtree(resources)
     shutil.copytree(OVERLAY,resources)
+    # Copy the Extra Gauges compatibility patch's readable Java source as well.
+    patchsrc=BASE/'compatibility/src/main/java'
+    if patchsrc.exists():
+        for java in patchsrc.rglob('*.java'):
+            dest=(TARGET/'src/main/java'/java.relative_to(patchsrc))
+            dest.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(java,dest)
     # The overlay contains finished/generated recipes. Do not let older recipes
     # under src/generated/resources override or duplicate them in builds.
     generated=TARGET/'src/generated/resources/data/prma/recipes'
@@ -44,7 +51,7 @@ def main():
             ('forge_version','47.4.26'),
             ('mod_id','prma'),
             ('mod_name','Create: Custom TACZ Automation'),
-            ('mod_version','1.2.2'),
+            ('mod_version','1.3.0'),
             ('create_version','6.0.8-289'),
             ('ponder_version','1.0.91'),
             ('flywheel_version','1.0.5'),

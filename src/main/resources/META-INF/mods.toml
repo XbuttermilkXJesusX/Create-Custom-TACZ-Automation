@@ -17,7 +17,7 @@ license="MIT"
 # The modid of the mod
 modId="prma" #mandatory
 # The version number of the mod
-version="1.2.2" #mandatory
+version="1.3.1" #mandatory
 # A display name for the mod
 displayName="Create: Custom TACZ Automation" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
@@ -39,7 +39,7 @@ authors="Type-32" #optional
 #displayTest="MATCH_VERSION" # MATCH_VERSION is the default if nothing is specified (#optional)
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''Create: Custom TACZ Automation, derived from Precise Manufacturing 0.4.4 (original work by Type-32). Includes PRMA items and its full Create processing recipe set. Internal mod ID remains prma for save and addon compatibility.'''
+description='''Create: Custom TACZ Automation, derived from Precise Manufacturing 0.4.4 (original work by Type-32). Includes PRMA items, Create automation recipes, and built-in TaCZ GunId-aware Extra Gauges compatibility. Internal mod ID remains prma for save and addon compatibility.'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies."prma"]] #optional
    # the modid of the dependency
@@ -85,5 +85,13 @@ description='''Create: Custom TACZ Automation, derived from Precise Manufacturin
 modId="zerocontact"
 mandatory=false
 versionRange="[1.1.6,)"
+ordering="AFTER"
+side="BOTH"
+
+# Optional: integrates with original Create: Extra Gauges 2.0.7 at runtime.
+[[dependencies."prma"]]
+modId="extra_gauges"
+mandatory=false
+versionRange="[2.0.7,2.0.8)"
 ordering="AFTER"
 side="BOTH"
