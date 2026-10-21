@@ -1,0 +1,39 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "  AA B",
+    "  CABA",
+    "  CAAA",
+    "  CAAC",
+    "  BCCA",
+    "  CBCC",
+    "AACD  ",
+    "CC    "
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:gunpowder"
+    },
+    "B": {
+      "tag": "forge:ingots/iron"
+    },
+    "C": {
+      "tag": "forge:ingots/copper"
+    },
+    "D": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "result": {
+    "item": "tacz:ammo",
+    "count": 2,
+    "nbt": "{AmmoId:\"turrettacz:81mm_mortar_shell\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "turrettacz"
+    }
+  ]
+}
