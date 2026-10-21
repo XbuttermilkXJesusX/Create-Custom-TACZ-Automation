@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: prma
-Specification-Vendor: Type-32
-Specification-Version: 1
-Implementation-Title: PreciseManufacturing
-Implementation-Version: 0.4.4-cr6.0-SIMPLE-beta
-Implementation-Vendor: Type-32
-Implementation-Timestamp: 2025-03-15T17:28:12+0800
-
