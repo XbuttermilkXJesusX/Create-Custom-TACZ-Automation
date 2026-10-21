@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    " AB",
+    " CA",
+    " A ",
+    "AA "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "tag": "minecraft:planks"
+    },
+    "C": {
+      "item": "tacz:target"
+    }
+  },
+  "result": {
+    "item": "hardenedtargets:reinforced_target"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "hardenedtargets"
+    }
+  ]
+}

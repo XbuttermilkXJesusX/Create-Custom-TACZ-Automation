@@ -1,0 +1,28 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAAA A ",
+    "AA    A",
+    "  AAAAA",
+    " AA AAA",
+    "AA A A ",
+    "AA AAAA",
+    "AAA   A"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "result": {
+    "item": "zerocontact:rigs_fast_tac",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

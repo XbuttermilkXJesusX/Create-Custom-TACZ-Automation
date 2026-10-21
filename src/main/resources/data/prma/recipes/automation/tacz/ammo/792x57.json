@@ -1,0 +1,31 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    " A    ",
+    "AABAA ",
+    "ABAA  ",
+    "AAABA ",
+    "AAAABA",
+    "BBAAA "
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/copper"
+    },
+    "B": {
+      "tag": "forge:gunpowder"
+    }
+  },
+  "result": {
+    "item": "tacz:ammo",
+    "count": 48,
+    "nbt": "{AmmoId:\"tacz:792x57\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tacz"
+    }
+  ]
+}

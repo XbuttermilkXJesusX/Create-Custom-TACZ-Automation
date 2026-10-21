@@ -1,0 +1,42 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAABAAAAA",
+    "CAAAAAAAB",
+    "AAAAADAAA",
+    "AAAABAAAA",
+    "ABABAAAAA",
+    "AACEBABDB",
+    "AAAABAABA",
+    "AAAAAEAAB",
+    "BAEAAADAE"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/iron"
+    },
+    "B": {
+      "tag": "forge:gems/quartz"
+    },
+    "C": {
+      "tag": "forge:rods/blaze"
+    },
+    "D": {
+      "tag": "minecraft:logs"
+    },
+    "E": {
+      "tag": "forge:leather"
+    }
+  },
+  "result": {
+    "item": "lrtactical:melee",
+    "nbt": "{MeleeWeaponId:\"lrtactical:fire_axe\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "apocalypticarsenal"
+    }
+  ]
+}

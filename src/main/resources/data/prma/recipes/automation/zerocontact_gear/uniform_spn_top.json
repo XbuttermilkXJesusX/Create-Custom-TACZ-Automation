@@ -1,0 +1,26 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "A    ",
+    "   A ",
+    "   AA",
+    "  AA ",
+    "  AA "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "result": {
+    "item": "zerocontact:uniform_spn_top",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

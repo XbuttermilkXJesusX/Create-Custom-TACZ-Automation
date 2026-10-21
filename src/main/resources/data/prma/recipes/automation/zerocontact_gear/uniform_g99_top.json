@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "A A A  A",
+    "        ",
+    "A A AA  "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:brown_wool"
+    }
+  },
+  "result": {
+    "item": "zerocontact:uniform_g99_top",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

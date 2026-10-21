@@ -1,0 +1,23 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAAA AA",
+    "A  AA A"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "result": {
+    "item": "zerocontact:armor_jpc_v1",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

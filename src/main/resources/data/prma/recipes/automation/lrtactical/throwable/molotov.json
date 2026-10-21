@@ -1,0 +1,32 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    " A",
+    "BC",
+    "BB",
+    " A"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/iron"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "C": {
+      "item": "minecraft:dragon_breath"
+    }
+  },
+  "result": {
+    "item": "lrtactical:throwable",
+    "nbt": "{ThrowableId:\"lrtactical:molotov\"}",
+    "count": 3
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "lrtactical"
+    }
+  ]
+}

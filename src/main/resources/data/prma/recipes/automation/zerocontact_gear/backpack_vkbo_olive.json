@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "A  B  ",
+    " ABBB ",
+    " BAB B",
+    "B B B ",
+    "  B  B",
+    " BBBAB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "result": {
+    "item": "zerocontact:backpack_vkbo_olive",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

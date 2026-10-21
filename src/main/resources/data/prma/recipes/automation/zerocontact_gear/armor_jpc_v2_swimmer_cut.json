@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAA",
+    "  A",
+    "  A"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "result": {
+    "item": "zerocontact:armor_jpc_v2_swimmer_cut",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

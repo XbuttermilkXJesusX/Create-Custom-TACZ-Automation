@@ -1,0 +1,26 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AA",
+    " A",
+    "A ",
+    "A ",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": {
+    "item": "zerocontact:uniform_british23_bottom",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

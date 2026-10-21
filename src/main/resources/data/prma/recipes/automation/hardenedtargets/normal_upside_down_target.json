@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "tacz:target"
+    }
+  },
+  "result": {
+    "item": "hardenedtargets:normal_upside_down_target"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "hardenedtargets"
+    }
+  ]
+}

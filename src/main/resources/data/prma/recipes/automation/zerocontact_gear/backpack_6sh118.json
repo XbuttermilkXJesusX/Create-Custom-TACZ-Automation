@@ -1,0 +1,33 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAAAAA   ",
+    "BA  AAA  ",
+    "BAA BAAAB",
+    " AAAAABAA",
+    "AAAAA  AA",
+    "AAAAA AAA",
+    "AAA A BBA",
+    "AA AABAAA",
+    "A AAAA AA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:green_wool"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "zerocontact:backpack_6sh118",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

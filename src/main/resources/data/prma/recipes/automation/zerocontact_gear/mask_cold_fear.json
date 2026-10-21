@@ -1,0 +1,23 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "  A",
+    "A  "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:black_carpet"
+    }
+  },
+  "result": {
+    "item": "zerocontact:mask_cold_fear",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

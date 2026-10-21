@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAA AAA",
+    "B AAA A",
+    "AAAAA A",
+    "AAAA A ",
+    "A  AA A",
+    "AAAAAAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "result": {
+    "item": "zerocontact:mask_tagilla_manhunt",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

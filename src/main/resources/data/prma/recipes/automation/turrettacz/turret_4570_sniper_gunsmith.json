@@ -1,0 +1,51 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "ABACBDCDD",
+    "AEDFDEGDB",
+    "BCGDDDDDD",
+    "EGDEEDDDG",
+    "DDDADDAHD",
+    "ACDGDCDEE",
+    "GDDDDDDFC",
+    "DADDDGDAG",
+    "DDGDCDCGD"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:dusts/redstone"
+    },
+    "B": {
+      "tag": "forge:rods/blaze"
+    },
+    "C": {
+      "item": "minecraft:iron_bars"
+    },
+    "D": {
+      "tag": "forge:ingots/iron"
+    },
+    "E": {
+      "tag": "forge:ingots/copper"
+    },
+    "F": {
+      "tag": "forge:gems/diamond"
+    },
+    "G": {
+      "tag": "forge:ingots/gold"
+    },
+    "H": {
+      "item": "minecraft:dispenser"
+    }
+  },
+  "result": {
+    "item": "turrettacz:turret_4570_sniper",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "turrettacz"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "ABCDBAEBB",
+    "BBBCBCFAC",
+    "BBBGBBDBE",
+    "BBBBACBAD",
+    "BBBCABCDC",
+    "BDBBCGDCG",
+    "BBCBBHBEB",
+    "BIBBEFBEC",
+    "DDAEBCBBB"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:dusts/redstone"
+    },
+    "B": {
+      "tag": "forge:ingots/iron"
+    },
+    "C": {
+      "tag": "forge:ingots/copper"
+    },
+    "D": {
+      "item": "minecraft:iron_bars"
+    },
+    "E": {
+      "tag": "forge:ingots/gold"
+    },
+    "F": {
+      "item": "minecraft:piston"
+    },
+    "G": {
+      "tag": "forge:rods/blaze"
+    },
+    "H": {
+      "tag": "forge:gems/diamond"
+    },
+    "I": {
+      "item": "minecraft:dispenser"
+    }
+  },
+  "result": {
+    "item": "turrettacz:m20_bastion_autocannon",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "turrettacz"
+    }
+  ]
+}

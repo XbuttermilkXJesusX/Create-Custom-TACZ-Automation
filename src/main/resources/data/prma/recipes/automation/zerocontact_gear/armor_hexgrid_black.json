@@ -1,0 +1,23 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAA",
+    "  A"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": {
+    "item": "zerocontact:armor_hexgrid_black",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

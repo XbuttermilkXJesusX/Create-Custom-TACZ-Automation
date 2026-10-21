@@ -1,0 +1,23 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AA A ",
+    "AAAAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:blue_wool"
+    }
+  },
+  "result": {
+    "item": "zerocontact:armor_untar_blue",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}

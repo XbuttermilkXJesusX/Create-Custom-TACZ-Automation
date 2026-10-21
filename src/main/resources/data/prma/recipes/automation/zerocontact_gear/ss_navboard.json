@@ -1,0 +1,39 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAA  ABB ",
+    "C AB A C ",
+    "D BB EFBF"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:redstone"
+    },
+    "C": {
+      "item": "minecraft:stone_button"
+    },
+    "D": {
+      "item": "minecraft:compass"
+    },
+    "E": {
+      "item": "minecraft:map"
+    },
+    "F": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "zerocontact:ss_navboard",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "zerocontact"
+    }
+  ]
+}
