@@ -1,0 +1,37 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "   A   ",
+    " BBC B ",
+    "BA B AB",
+    "ABBB AB",
+    "BBBABBB",
+    "BBBBBAB",
+    "  BCABB",
+    "  BBBAC",
+    " ABABA "
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:gunpowder"
+    },
+    "B": {
+      "tag": "forge:ingots/copper"
+    },
+    "C": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "result": {
+    "item": "tacz:ammo",
+    "count": 3,
+    "nbt": "{AmmoId:\"tacz:rpg_rocket\"}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tacz"
+    }
+  ]
+}

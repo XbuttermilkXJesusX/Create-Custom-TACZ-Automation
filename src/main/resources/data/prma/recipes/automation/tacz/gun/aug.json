@@ -1,0 +1,34 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "pattern": [
+    "    G   ",
+    "SSSPPPAA",
+    "  A P AA",
+    "  A    A"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:plates/aluminum"
+    },
+    "G": {
+      "tag": "forge:glass"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "S": {
+      "tag": "forge:plates/steel"
+    }
+  },
+  "result": {
+    "item": "tacz:modern_kinetic_gun",
+    "nbt": "{GunCurrentAmmoCount:30,GunId:\"tacz:aug\",HasBulletInBarrel:1b,Damage:0,GunFireMode:\"AUTO\",ai_ammo:{}}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tacz"
+    }
+  ]
+}
