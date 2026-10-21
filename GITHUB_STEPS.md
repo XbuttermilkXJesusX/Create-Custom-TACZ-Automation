@@ -1,7 +1,7 @@
 # Publishing on GitHub
 
 Run `python tools/prepare_github.py` first, to obtain the original PRMA Java
-source and overlay the exact v1.3.1 custom recipes and assets.
+source and overlay the exact v1.3.2 custom recipes and assets.
 
 Then:
 
@@ -17,7 +17,7 @@ cd Create-Custom-TACZ-Automation-Source
 git remote rename origin upstream
 git remote add origin https://github.com/YOUR_USERNAME/Create-Custom-TACZ-Automation.git
 git add -A
-git commit -m "Customize PRMA as Create: Custom TACZ Automation v1.3.1"
+git commit -m "Customize PRMA as Create: Custom TACZ Automation v1.3.2"
 git push -u origin HEAD:main
 ```
 
@@ -31,6 +31,6 @@ Before publishing a release or binary, confirm that your Java 17 Forge build
 works, that it doesn't conflict with an existing `prma` JAR, and that all
 third-party artwork licensing is correctly attributed.
 
-Note: v1.3.1 integrates Extra Gauges TaCZ compatibility; see README.md for installation and Java Mixin build constraints.
+Note: v1.3.2 integrates Extra Gauges TaCZ compatibility; see README.md for installation and Java Mixin build constraints.
 
 GitHub Desktop users: extract this ZIP, copy its contents to your cloned repo, commit, and push. The `.gitignore` includes an exception for the required compatibility `*.class` binary.

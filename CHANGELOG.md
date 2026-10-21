@@ -1,3 +1,10 @@
+## v1.3.2
+
+- Changed TaCZ GunId-aware Extra Gauges compatibility from a post-search correction to a pre-search, cancellable selector for TaCZ guns.
+- Preserved all 537 original recipes, PRMA items, textures, and ZeroContact ammunition operations.
+- Kept original Extra Gauges 2.0.7 JAR untouched.
+- Runtime behavior requires testing; compile and JAR validations are not a Minecraft runtime test.
+
 ## v1.3.1 — ZeroContact ammunition overhaul
 
 - Replaced 55 ZeroContact mechanical-crafting ammo patterns with 55 Create Deploying recipes using PRMA prepared casings and cartridges.
