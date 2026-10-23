@@ -11,6 +11,12 @@ This project is a customized continuation of PRMA's **simplified automation** ve
 > **Important:** The internal mod ID is still `prma` for compatibility. **This replaces the original PRMA mod; do not install both JARs.**
 
 
+## Download and project links
+
+- **CurseForge:** [Create: Custom TACZ Automation on CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-custom-tacz-automation)
+- **Modrinth:** [Create: Custom TACZ Automation on Modrinth](https://modrinth.com/mod/create-custom-tacz-automation)
+- **GitHub:** [Source code, issues, and releases](https://github.com/XbuttermilkXJesusX/Create-Custom-TACZ-Automation)
+
 ## Version 1.3.3 — CurseForge update notifications
 
 This release enables **Minecraft Forge's built-in update checker** for `prma` (the existing internal mod ID). If a newer version of **Create: Custom TACZ Automation** is announced through the published version feed, Forge can display an update indicator in the Mods menu, show release notes and link players to [the official CurseForge page](https://www.curseforge.com/minecraft/mc-mods/create-custom-tacz-automation). It does **not** download or install updates automatically.
