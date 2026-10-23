@@ -6,10 +6,24 @@ Create: Custom TACZ Automation expands **Create: Precise Manufacturing (PRMA)** 
 
 This project is a customized continuation of PRMA's **simplified automation** version. It retains the original PRMA content and adds recipes inspired by Create: Arms Race and other TaCZ-related addons.
 
-> **Current version: 1.3.2** · Minecraft **1.20.1** · **Minecraft Forge 47.x** · Works on **client and dedicated server**
+> **Current version: 1.3.3** · Minecraft **1.20.1** · **Minecraft Forge 47.x** · Works on **client and dedicated server**
 >
 > **Important:** The internal mod ID is still `prma` for compatibility. **This replaces the original PRMA mod; do not install both JARs.**
 
+
+## Version 1.3.3 — CurseForge update notifications
+
+This release enables **Minecraft Forge's built-in update checker** for `prma` (the existing internal mod ID). If a newer version of **Create: Custom TACZ Automation** is announced through the published version feed, Forge can display an update indicator in the Mods menu, show release notes and link players to [the official CurseForge page](https://www.curseforge.com/minecraft/mc-mods/create-custom-tacz-automation). It does **not** download or install updates automatically.
+
+- Version feed URL: [`update.json`](https://raw.githubusercontent.com/XbuttermilkXJesusX/Create-Custom-TACZ-Automation/main/update.json) (must be published at the GitHub repository root on the `main` branch).
+- Publishing destination: [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-custom-tacz-automation) (project ID **1758542**).
+- **Optional automatic synchronization:** the included [GitHub Actions workflow](.github/workflows/sync-curseforge-updates.yml) runs hourly and queries the official CurseForge API for released Forge 1.20.1 files. Configure its `CURSEFORGE_API_KEY` repository secret first. Until configured, manually update `update.json` when you publish a new version.
+- The initial version feed lists **1.2.2**, the latest file visible on CurseForge as this release package was prepared. This avoids claiming that **1.3.3** is downloadable from CurseForge before you actually publish it. The workflow will promote 1.3.3 once the CurseForge file is released and recognized.
+- Player checks need an internet connection to retrieve the GitHub-hosted JSON. Failures should not prevent Minecraft from starting.
+
+See [UPDATE_CHECK_SETUP.md](UPDATE_CHECK_SETUP.md) for the required one-time GitHub setup and manual fallback.
+
+**No recipe or compatibility changes in 1.3.3:** The 537 recipes, including 55 ZeroContact Deployer ammo operations, original PRMA classes and integrated Extra Gauges/TaCZ `GunId` patch are unchanged from 1.3.2.
 
 ## Version 1.3.2 — ZeroContact ammo production update
 

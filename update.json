@@ -1,0 +1,10 @@
+{
+  "homepage": "https://www.curseforge.com/minecraft/mc-mods/create-custom-tacz-automation",
+  "1.20.1": {
+    "1.2.2": "Available on CurseForge. See the project page for full release notes."
+  },
+  "promos": {
+    "1.20.1-latest": "1.2.2",
+    "1.20.1-recommended": "1.2.2"
+  }
+}

@@ -17,13 +17,13 @@ license="MIT"
 # The modid of the mod
 modId="prma" #mandatory
 # The version number of the mod
-version="1.3.2" #mandatory
+version="1.3.3" #mandatory
 # A display name for the mod
 displayName="Create: Custom TACZ Automation" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+updateJSONURL="https://raw.githubusercontent.com/XbuttermilkXJesusX/Create-Custom-TACZ-Automation/main/update.json" # Forge built-in update checker
 # A URL for the "homepage" for this mod, displayed in the mod UI
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/create-custom-tacz-automation" # CurseForge project
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="prma.png" #optional
 # A text field displayed in the mod UI

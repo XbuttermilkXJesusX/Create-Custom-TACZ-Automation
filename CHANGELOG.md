@@ -1,3 +1,10 @@
+## v1.3.3 — Forge update checker
+
+- Connected Forge `prma` update notifications to the GitHub-hosted version feed and official CurseForge project page.
+- Included `update.json`, an opt-in GitHub Action, and a CurseForge API synchronization script.
+- Kept all 537 recipes, PRMA code/assets, ZeroContact ammo and GunId Extra Gauges compatibility unchanged.
+- Automatic release promotion requires setting the GitHub `CURSEFORGE_API_KEY` secret and enabling the workflow.
+
 ## v1.3.2
 
 - Changed TaCZ GunId-aware Extra Gauges compatibility from a post-search correction to a pre-search, cancellable selector for TaCZ guns.

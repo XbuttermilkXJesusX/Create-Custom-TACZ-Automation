@@ -1,13 +1,13 @@
 {
-  "jar_file": "Create-Custom-TACZ-Automation-1.3.1-ZeroContact-Ammo-Forge-1.20.1.jar",
-  "jar_sha256": "9cd831439ce4e61903160f305b39a02ee72a85b094ad92530861796e403c10d5",
+  "jar_file": "Create-Custom-TACZ-Automation-1.3.3-Forge-1.20.1.jar",
+  "jar_sha256": "ffc99714cea011a39707499ee787f135e661b4bdc29f266a8caec26f2ab343ea",
   "resources": {
     "pack.mcmeta": "070adcb6ac4f87d0254ac3881edb41527abdfdbb2949b1bc5d768efbceab4409",
     "prma.png": "356de62bce3b0e002e56fc5bc5ff3bcbc2f0a5022cc8e86143c31b114b1afa90",
     "mixin.refmap.json": "2c94879b9e943b34c562f6966f9e0aa88c1a30b39bc8e17bd18772b66af24523",
     "prma.mixins.json": "8b443d9ce3b1c43cd69a54d0349c418cf61f0dffe8b3aa678eb3a0997a3245e9",
     "extra_gauges_tacz_compat.mixins.json": "96d72d2deb7a0966119b9fd0dc0e4eb0488cbc3500e5b2a553227db257056f41",
-    "META-INF/mods.toml": "fc493e319d9800d35e472502daf37dc6808f11c4f61fd7af3a5e490f7dc15baf",
+    "META-INF/mods.toml": "22c4890810a592c19ea7e57f085a8adf307ac23cb72fe7a0cfef3f30691ce1e1",
     "assets/icon.png": "356de62bce3b0e002e56fc5bc5ff3bcbc2f0a5022cc8e86143c31b114b1afa90",
     "assets/icon.bbmodel": "97841a874894522a4852406cd0d9222446cf4f21ce855d7fe3c6c19eb61f00c3",
     "assets/precise.png": "5b07b71b9c89e93e0396cd2fd1128ef4e0cfbea2fe82eb66d395c6c3cf371dd4",
