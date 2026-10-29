@@ -1,40 +1,38 @@
-## v1.3.3 — Forge update checker
-
-- Connected Forge `prma` update notifications to the GitHub-hosted version feed and official CurseForge project page.
-- Included `update.json`, an opt-in GitHub Action, and a CurseForge API synchronization script.
-- Kept all 537 recipes, PRMA code/assets, ZeroContact ammo and GunId Extra Gauges compatibility unchanged.
-- Automatic release promotion requires setting the GitHub `CURSEFORGE_API_KEY` secret and enabling the workflow.
-
-## v1.3.2
-
-- Changed TaCZ GunId-aware Extra Gauges compatibility from a post-search correction to a pre-search, cancellable selector for TaCZ guns.
-- Preserved all 537 original recipes, PRMA items, textures, and ZeroContact ammunition operations.
-- Kept original Extra Gauges 2.0.7 JAR untouched.
-- Runtime behavior requires testing; compile and JAR validations are not a Minecraft runtime test.
-
-## v1.3.1 — ZeroContact ammunition overhaul
-
-- Replaced 55 ZeroContact mechanical-crafting ammo patterns with 55 Create Deploying recipes using PRMA prepared casings and cartridges.
-- All original PRMA manufacturing recipes, compiled implementation, and Extra Gauges compatibility preserved.
-- Other 66 ZeroContact gear recipes and three prior ZeroContact conversions unchanged.
-- Added a complete ZeroContact ammo input/output guide and CSV.
-- No new items, Java classes, or required dependencies.
-
 # Changelog
 
-## 1.3.0 — Versioned integrated compatibility release
+## 1.3.4 — Guns and Targets 1.0.6 and TACZ Turrets 4.1.0 compatibility
 
-- Updated the Forge mod version from 1.2.3 to **1.3.0**.
-- Preserved all 537 Create recipes and the original PRMA functionality.
-- Retained the integrated Extra Gauges + TaCZ `GunId` lookup compatibility patch.
-- Updated README, overlay build output name, and Gradle-preparation version metadata.
-- Fixed `.gitignore` so the required prebuilt compatibility Mixin can be committed when using the overlay build workflow.
-- No gameplay recipe balance changes.
+### Guns and Targets 1.0.6
+- Checked 1.0.6 against the previously supported 1.0.5.1 JAR: the existing 31 outputs remain available.
+- Added 10 Mechanical Crafting recipes: 8 guns (AR-15, C7A2, HK416C, HK MP5SD, MKE MPT55, MKE MPT55A1, MPT55K1A1, MPT55K2A1) and 2 attachments (C7A2 stock, MPT55A1 stock).
+- Set output `GunId` for each new gun and included PRMA-compatible TaCZ item NBT.
+- Worked around the addon's gun-smith HK416C recipe pointing at HK416D by giving the Create HK416C recipe its intended `gat:hk416c` output.
+
+### TACZ Turrets 4.1.0
+- Removed the outdated 3.0.0-era `tacz_turrets:turret` recipe.
+- Added 10 turret production recipes, 19 camouflage recipes, and one turret workbench recipe for the new item IDs.
+- Mechanical recipes are conditionally loaded with TACZ Turrets installed; Mekanism/Immersive Engineering-dependent recipes are separately conditioned on their mod being present.
+- Did not add `*_identical` alternative outputs that share identical ingredients and would cause recipe conflicts.
+
+### Preserved
+- All 536 other existing recipe files are unchanged (old obsolete turret recipe replaced, new recipe count 576).
+- Original PRMA content, 55 ZeroContact ammo Deploying recipes, TaCZ `GunId` Factory Gauge patch, and Forge update feed remain intact.
+- Requires both client and server install. Static validation completed, but Minecraft gameplay testing remains necessary.
+
+## 1.3.3
+- Added Forge update-checking metadata, GitHub version feed and optional CurseForge sync automation.
+
+## 1.3.2
+- Improved the integrated Extra Gauges `GunId` mechanical recipe selector.
+
+## 1.3.1
+- Converted 55 ZeroContact ammo recipes to Deployer-based assembly.
+
+## 1.3.0
+- Major version number update with integrated Extra Gauges fix retained.
 
 ## 1.2.3
-
-- Integrated the standalone Extra Gauges/TaCZ compatibility Mixin into the automation mod.
+- Integrated the separate Extra Gauges × TaCZ compatibility addon.
 
 ## 1.2.2
-
-- Added 121 ZeroContact workbench automation recipes.
+- Expanded ZeroContact recipes to establish 537 total recipes.

@@ -1,0 +1,33 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "   SSPAA",
+    "SSPPSPSS",
+    "SSSSPSSA",
+    "   SASSS",
+    "   PSS  "
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:plates/steel"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "A": {
+      "tag": "forge:plates/aluminum"
+    }
+  },
+  "result": {
+    "item": "tacz:modern_kinetic_gun",
+    "count": 1,
+    "nbt": "{GunId:\"gat:mke_mpt55a1\",GunFireMode:\"AUTO\",GunCurrentAmmoCount:30,HasBulletInBarrel:1b,Damage:0,ai_ammo:{}}"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "gunsandtargets"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAAAAAA",
+    "AAAAAAA",
+    "AAAAAAA",
+    "AAABBBB",
+    "CCDEEEE",
+    "EEEEEEE",
+    "EEEEE  "
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/brass"
+    },
+    "B": {
+      "item": "create:brass_casing"
+    },
+    "C": {
+      "item": "create:precision_mechanism"
+    },
+    "D": {
+      "item": "create:cogwheel"
+    },
+    "E": {
+      "item": "create:andesite_alloy"
+    }
+  },
+  "result": {
+    "item": "tacz_turrets:brass_turret",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tacz_turrets"
+    }
+  ]
+}

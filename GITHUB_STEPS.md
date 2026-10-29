@@ -1,40 +1,13 @@
-# Publishing on GitHub
+# GitHub publishing — v1.3.4
 
-Run `python tools/prepare_github.py` first, to obtain the original PRMA Java
-source and overlay the exact v1.3.3 custom recipes and assets.
+Extract this ZIP into your existing repository as an update (not a new repository). Review `git diff`, then commit the resources and documentation.
 
-Then:
+1. Upload/commit the updated `src/main/resources` recipe files and `META-INF/mods.toml`.
+2. Commit `README.md`, `CHANGELOG.md`, and scripts, retaining `.github/workflows` and `update.json`.
+3. Keep `compatibility/prebuilt/` and its special `.gitignore` exception for the compiled compatibility Mixin.
+4. Build using `python scripts/build_overlay.py --upstream /path/to/prma-original.jar`.
+5. Run `python scripts/verify_updated_addons.py ...` against Guns and Targets 1.0.6 and TACZ Turrets 4.1.0.
+6. Test the generated mod on Forge client and dedicated server before publishing on CurseForge or Modrinth.
+7. Publish v1.3.4 on CurseForge and Modrinth, then allow the existing update-feed workflow to discover the new Forge release.
 
-1. On GitHub click **New repository** and name it e.g.
-   `Create-Custom-TACZ-Automation`.
-2. Open the generated `Create-Custom-TACZ-Automation-Source` folder.
-3. Keep `LICENSE`, upstream attribution and README information.
-4. From this folder, upload the source files through GitHub's **Add file → Upload files**
-   (or use the Git commands below).
-
-```sh
-cd Create-Custom-TACZ-Automation-Source
-git remote rename origin upstream
-git remote add origin https://github.com/YOUR_USERNAME/Create-Custom-TACZ-Automation.git
-git add -A
-git commit -m "Customize PRMA as Create: Custom TACZ Automation v1.3.3"
-git push -u origin HEAD:main
-```
-
-If your new repository already has commits, coordinate the branch before pushing.
-For easier attribution, consider forking the original PRMA repository instead
-of creating a new one.
-
-**Note:** `git push` may request GitHub authentication. Replace `YOUR_USERNAME`.
-
-Before publishing a release or binary, confirm that your Java 17 Forge build
-works, that it doesn't conflict with an existing `prma` JAR, and that all
-third-party artwork licensing is correctly attributed.
-
-Note: v1.3.3 integrates Extra Gauges TaCZ compatibility; see README.md for installation and Java Mixin build constraints.
-
-GitHub Desktop users: extract this ZIP, copy its contents to your cloned repo, commit, and push. The `.gitignore` includes an exception for the required compatibility `*.class` binary.
-
-## Enable update notifications
-
-Commit `update.json`, `.github/workflows/sync-curseforge-updates.yml`, and `scripts/sync_curseforge_updates.py` to the `main` branch of https://github.com/XbuttermilkXJesusX/Create-Custom-TACZ-Automation. Add the `CURSEFORGE_API_KEY` secret and enable Actions write permission. See `UPDATE_CHECK_SETUP.md`.
+**Source note:** This is an overlay/repack builder using original PRMA binaries. It is not a complete independent Java source tree for PRMA.

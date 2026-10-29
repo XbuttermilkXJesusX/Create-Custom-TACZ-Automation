@@ -51,7 +51,7 @@ def main():
             ('forge_version','47.4.26'),
             ('mod_id','prma'),
             ('mod_name','Create: Custom TACZ Automation'),
-            ('mod_version','1.3.0'),
+            ('mod_version','1.3.4'),
             ('create_version','6.0.8-289'),
             ('ponder_version','1.0.91'),
             ('flywheel_version','1.0.5'),

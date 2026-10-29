@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check that v1.2.1 source resources match the binary from which extracted."""
+"""Check that v1.3.4 source resources match the binary from which extracted."""
 from pathlib import Path
 import hashlib, json, sys
 r=Path(__file__).resolve().parents[1]

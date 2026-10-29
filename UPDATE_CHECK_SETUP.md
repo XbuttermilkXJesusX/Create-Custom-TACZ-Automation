@@ -1,4 +1,4 @@
-# Enable update notifications — Create: Custom TACZ Automation v1.3.3
+# Enable update notifications — Create: Custom TACZ Automation v1.3.4
 
 The mod now points Forge's built-in update checker at this public URL:
 
@@ -8,11 +8,11 @@ Forge reads that JSON file when checking updates, compares its `1.20.1-latest` a
 
 ## Required once: Publish the feed
 
-1. Upload the contents of the v1.3.3 source ZIP (including hidden `.github` directory) to the GitHub repository **https://github.com/XbuttermilkXJesusX/Create-Custom-TACZ-Automation**, on its **main** branch.
+1. Upload the contents of the v1.3.4 source ZIP (including hidden `.github` directory) to the GitHub repository **https://github.com/XbuttermilkXJesusX/Create-Custom-TACZ-Automation**, on its **main** branch.
 2. Verify that `https://raw.githubusercontent.com/XbuttermilkXJesusX/Create-Custom-TACZ-Automation/main/update.json` opens and displays JSON (not a 404 page).
-3. Upload `Create-Custom-TACZ-Automation-1.3.3-Forge-1.20.1.jar` as a new **Forge / 1.20.1** file on **https://www.curseforge.com/minecraft/mc-mods/create-custom-tacz-automation**.
+3. Upload `Create-Custom-TACZ-Automation-1.3.4-Updated-Addons-Forge-1.20.1.jar` as a new **Forge / 1.20.1** file on **https://www.curseforge.com/minecraft/mc-mods/create-custom-tacz-automation**.
 
-The initial JSON has version `1.2.2` as the latest CurseForge file **observed when this package was made**. That is deliberate: do not advertise unreleased builds. After v1.3.3 is published, update the feed using either automatic or manual steps below.
+The initial JSON has version `1.2.2` as the latest CurseForge file **observed when this package was made**. That is deliberate: do not advertise unreleased builds. After v1.3.4 is published, update the feed using either automatic or manual steps below.
 
 ## Option A: Automatic CurseForge release synchronization (recommended)
 
@@ -39,7 +39,7 @@ After each new release becomes publicly downloadable on CurseForge:
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/create-custom-tacz-automation",
   "1.20.1": {
-    "1.3.3": "Adds Forge update notifications",
+    "1.3.4": "Compatibility with Guns and Targets 1.0.6 and TACZ Turrets 4.1.0",
     "1.3.4": "New features and fixes"
   },
   "promos": {
@@ -53,9 +53,9 @@ The JSON above is an **example for a future 1.3.4 release**, not a claim that 1.
 
 ## Testing
 
-- Start Forge 1.20.1 with v1.3.3 after you publish the JSON; check Minecraft's **Mods** menu.
-- Before a newer CurseForge release exists, **you should not get an outdated warning** for 1.3.3.
+- Start Forge 1.20.1 with v1.3.4 after you publish the JSON; check Minecraft's **Mods** menu.
+- Before a newer CurseForge release exists, **you should not get an outdated warning** for 1.3.4.
 - When a newer version is released and its version number appears in `update.json`, Forge should show an update indicator and link to the CurseForge project.
 - You can run `python scripts/sync_curseforge_updates.py --fixture some-api-response.json --output /tmp/test-feed.json` for offline tests without an API key.
 
-**Important:** Installing the v1.3.3 JAR alone does not create the public JSON file or enable your repository's GitHub Actions. Complete the GitHub setup above to make notifications function.
+**Important:** Installing the v1.3.4 JAR alone does not create the public JSON file or enable your repository's GitHub Actions. Complete the GitHub setup above to make notifications function.

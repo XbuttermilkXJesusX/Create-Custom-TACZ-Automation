@@ -1,0 +1,46 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAAAAAA",
+    "AAAAAAA",
+    "AAAAAAA",
+    "AAABBBB",
+    "BBBBCCD",
+    "DEFFFF "
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/steel"
+    },
+    "B": {
+      "item": "immersiveengineering:plate_steel"
+    },
+    "C": {
+      "item": "immersiveengineering:component_steel"
+    },
+    "D": {
+      "item": "immersiveengineering:light_engineering"
+    },
+    "E": {
+      "item": "immersiveengineering:radiator"
+    },
+    "F": {
+      "item": "immersiveengineering:treated_wood_horizontal"
+    }
+  },
+  "result": {
+    "item": "tacz_turrets:steel_turret",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tacz_turrets"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ]
+}

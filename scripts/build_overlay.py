@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create v1.3.3 from a local original PRMA binary and editable resources.
+"""Create v1.3.4 from a local original PRMA binary and editable resources.
 
 This is not a Java source compilation; the patch's Java source is in
 compatibility/src/main/java and verified working bytecode in compatibility/prebuilt.
@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--upstream', required=True, type=Path,
                     help='Original prma-1.20.1-0.4.4-cr6.0-SIMPLE-beta-all.jar')
 parser.add_argument('--output', type=Path,
-                    default=root / 'build/libs/Create-Custom-TACZ-Automation-1.3.3.jar')
+                    default=root / 'build/libs/Create-Custom-TACZ-Automation-1.3.4.jar')
 args = parser.parse_args()
 resources = root / 'src/main/resources'
 patch = root / 'compatibility/prebuilt/dev/customtacz/compat/mixin/FactoryPanelScreenTaCZMixin.class'

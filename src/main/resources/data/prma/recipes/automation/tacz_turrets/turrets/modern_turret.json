@@ -1,0 +1,35 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "pattern": [
+    "AAAAAAAA",
+    "AAAAAAAA",
+    "AAAAAAAA",
+    "AAAAAAAA",
+    "AAAAAAAA",
+    "AAAAAAAA",
+    "BBBBBBBB",
+    "CCCCCCCC"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/iron"
+    },
+    "B": {
+      "tag": "forge:ingots/gold"
+    },
+    "C": {
+      "tag": "forge:dusts/redstone"
+    }
+  },
+  "result": {
+    "item": "tacz_turrets:modern_turret",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tacz_turrets"
+    }
+  ]
+}
